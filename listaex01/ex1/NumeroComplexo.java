@@ -35,4 +35,20 @@ public class NumeroComplexo{
         return this.a + " + "+this.b+"i";
     }
     
+    public void setA(double a) {
+        this.a = a;
+    }
+    
+    public void setB(double b) {
+        this.b = b;
+    }
+    
+    public double getA() {
+        return a;
+    }
+    
+    public double getB() {
+        return b;
+    }
+    
 }
