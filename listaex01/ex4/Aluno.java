@@ -10,7 +10,7 @@ public class Aluno {
         this.nome = "";
     }
     
-    public Aluno(String nome,int registro) {
+    public Aluno(int registro,String nome) {
         this.registro = registro;
         this.nome = nome;
     }

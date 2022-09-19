@@ -1,29 +1,47 @@
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 package listaex01.ex4;
-import javax.xml.crypto.Data;
 
-import listaex01.ex4.Disciplina;
-
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class Matricula {
     
     private int numero;
     private Date data;
     private Aluno aluno;
-    private Disciplina disciplinas[];
+    private List<Disciplina> disciplinas;
 
     public Matricula() {
         this.numero = 0;
         this.data = new Date(System.currentTimeMillis());
         this.aluno = null;
-        this.disciplinas = new Disciplina[10];
+        this.disciplinas = new ArrayList<>();
+    }
+    public int getNumero() {
+        return numero;
+    }
+    public Date getData() {
+        return data;
+    }
+    public Aluno getAluno() {
+        return aluno;
+    }
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+    public void setData(Date data) {
+        this.data = data;
+    }
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
-
-    public double calculaTotal() {
-        double total = 0.0;
+    public float calculaTotal() {
+        float total = 0.0F;
         for (Disciplina d : this.disciplinas) {
             total += d.getValor();         
         }
@@ -41,6 +59,8 @@ public class Matricula {
         for (Disciplina d : this.disciplinas) {
             sb.append(String.format("\n\t\t%s", d));            
         }
-        sb.append(String.format("\n\t}\n\ttotal: %.2lf", calculaTotal()));
+        sb.append(String.format("\n\t}\n\ttotal: %.2f", calculaTotal()));
+
+        return sb.toString();
     }
 }

@@ -4,15 +4,15 @@ public class Disciplina {
     
     private int codigo;
     private String nome;
-    private double valor;
+    private float valor;
     
     public Disciplina() {
         this.codigo = 0;
         this.nome = "";
-        this.valor = 0.0;
+        this.valor = 0.0F;
     }
 
-    public Disciplina(int codigo,String nome,Double valor) {
+    public Disciplina(int codigo,String nome,float valor) {
         this.codigo = codigo;
         this.nome = nome;
         this.valor = valor;
@@ -26,7 +26,7 @@ public class Disciplina {
         return nome;
     }
 
-    public double getValor() {
+    public float getValor() {
         return valor;
     }
 
@@ -37,13 +37,13 @@ public class Disciplina {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setValor(double valor) {
+    public void setValor(float valor) {
         this.valor = valor;
     }
 
     public String toString() {
         return String.format(
-            "{codigo: %d, nome: %s, valor: %.2lf }",
+            "{codigo: %d, nome: %s, valor: %.2f }",
             this.codigo,this.nome,this.valor);
     }
 }
