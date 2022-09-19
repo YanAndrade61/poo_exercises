@@ -1,3 +1,5 @@
+package listaex01.ex4;
+
 public class Disciplina {
     
     private int codigo;
@@ -16,4 +18,32 @@ public class Disciplina {
         this.valor = valor;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String toString() {
+        return String.format(
+            "{codigo: %d, nome: %s, valor: %.2lf }",
+            this.codigo,this.nome,this.valor);
+    }
 }
