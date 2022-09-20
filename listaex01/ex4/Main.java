@@ -62,6 +62,7 @@ public class Main {
             int op = sc.nextInt();
             switch (op) {
                 case 0:
+                    sc.close();
                     return;
                 case 1:
                     System.out.println("Informe o registro e nome do aluno: ");
@@ -88,7 +89,7 @@ public class Main {
                         System.out.println("Informe o codigo da disciplina ou 0 para sair: ");
                         int codigo = sc.nextInt();
                         if(codigo == 0)break;
-                        Disciplina d = main.buscarDisciplina(sc.nextInt());
+                        Disciplina d = main.buscarDisciplina(codigo);
                         if(d == null)
                             System.out.println("Nao existe disciplina com este codigo");
                         else

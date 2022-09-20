@@ -59,7 +59,7 @@ public class Matricula {
         for (Disciplina d : this.disciplinas) {
             sb.append(String.format("\n\t\t%s", d));            
         }
-        sb.append(String.format("\n\t}\n\ttotal: %.2f", calculaTotal()));
+        sb.append(String.format("\n\t}\n\ttotal: %.2f\n}", calculaTotal()));
 
         return sb.toString();
     }
