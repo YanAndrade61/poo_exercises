@@ -19,11 +19,11 @@ public class Assistente extends Funcionario{
     public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
-    
+
     @Override
     public void exibeDados() {
         super.exibeDados();
-        System.out.printf("/nMatricula: %d",this.matricula);
+        System.out.printf("\nMatricula: %d",this.matricula);
     }
 
 }

@@ -34,4 +34,5 @@ public class Administrativo extends Assistente{
         super.exibeDados();
         System.out.printf("\nAdicional noturno: %.2f\nTurno: %s",this.addNoturno,this.turno);
     }
+    
 }

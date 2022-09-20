@@ -26,7 +26,7 @@ public class Funcionario {
         this.email = email;
     }
     public void exibeDados(){
-        System.out.printf("/nNome: %s /nEmail: %s",this.nome,this.email);
+        System.out.printf("\nNome: %s \nEmail: %s",this.nome,this.email);
     }
 
 }
