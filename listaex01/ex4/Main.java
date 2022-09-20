@@ -75,6 +75,9 @@ public class Main {
                     m = new Matricula();
                     Aluno a = null;
                     
+                    System.out.println("Informe o numero de matricula: ");
+                    m.setNumero(sc.nextInt());
+
                     System.out.println("Informe o registro do aluno: ");
                     a = main.buscarAluno(sc.nextInt());
                     if(a == null)
@@ -82,14 +85,25 @@ public class Main {
                     else
                         m.setAluno(a);
                     while (true) {
-                        System.out.println("Informe o registro do aluno: ");
-                        a = main.buscarAluno(sc.nextInt());
-                        if(a == null)
-                            System.out.println("Nao existe aluno com este registro");
+                        System.out.println("Informe o codigo da disciplina ou 0 para sair: ");
+                        int codigo = sc.nextInt();
+                        if(codigo == 0)break;
+                        Disciplina d = main.buscarDisciplina(sc.nextInt());
+                        if(d == null)
+                            System.out.println("Nao existe disciplina com este codigo");
                         else
-                            m.setAluno(a);
+                            m.getDisciplinas().add(d);
                     }
+                    main.addMatricula(m);
 
+                    break;
+                case 4:
+                    System.out.println("Informe o numero da matricula: ");
+                    m = main.buscarmatricula(sc.nextInt());
+                    if (m == null)
+                        System.out.println("Nao existe matricula com esse numero");
+                    else
+                        System.out.println(m);
                     break;
                 default:
                     break;
