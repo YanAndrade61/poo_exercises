@@ -2,9 +2,9 @@ package listaex02.ex2;
 
 public abstract class ContaBancaria {
     
-    private String cliente;
-    private int numConta;
-    private float saldo;
+    protected String cliente;
+    protected int numConta;
+    protected float saldo;
 
     public ContaBancaria() {
         this.cliente = "";
@@ -26,7 +26,26 @@ public abstract class ContaBancaria {
     public void depositar(float valor) {
         this.saldo += valor;
     }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+    public void setNumConta(int numConta) {
+        this.numConta = numConta;
+    }
+    public String getCliente() {
+        return cliente;
+    }
+    public int getNumConta() {
+        return numConta;
+    }
+    
     public abstract float getSaldo();
 
+    public String toString() {
+        return String.format(
+            "/nCliente: %s\nNumero Conta: %d\nSaldo: %.2f", 
+            this.cliente,this.numConta,getSaldo());
+    }
 
 }
